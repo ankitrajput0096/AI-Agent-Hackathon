@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "bad7be6d-e54f-465b-a5e3-318d4cd35b4b",
+		"name": "RAG stack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3521048"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8090/ask_general_query",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"What is the capital of USA?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8090/ask_general_query",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"ask_general_query"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://127.0.0.1:5000/ask_general_query \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"query\": \"What is the capital of France?\"\n}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8090/upload_document",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/ankitrajput/Desktop/RAG_docker/docker_files/previous/dv_summary.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8090/upload_document",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"upload_document"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://127.0.0.1:8888/upload_document' \\\n--header 'Content-Type: multipart/form-data' \\\n--form 'file=@/Users/ankitrajput/Desktop/example.txt'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8090/similarity_search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"Please explain what are the changes which occurred during the time period 1850–1900 related to The Golden Age of statistical graphics?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8090/similarity_search",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"similarity_search"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://127.0.0.1:5000/similarity_search \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"query\": \"Find content similar to this query.\"\n}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8090/query_document",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"Please explain what are the changes which occurred during the time period 1850–1900 related to The Golden Age of statistical graphics?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8090/query_document",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"query_document"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://127.0.0.1:5000/query_document \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"query\": \"What is the content of the document?\"\n}'\n"
+			},
+			"response": []
+		}
+	]
+}

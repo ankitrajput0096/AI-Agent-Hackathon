@@ -1,0 +1,20 @@
+services:
+  flask-server:
+    build:
+      context: ./RAG_backend
+    container_name: flask-server
+    ports:
+      - "8090:8090"
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+  # react_app:
+  #   build:
+  #     context: ./react_app
+  #   ports:
+  #     - "9000:9000"
+  #   depends_on:
+  #     - flask-server  

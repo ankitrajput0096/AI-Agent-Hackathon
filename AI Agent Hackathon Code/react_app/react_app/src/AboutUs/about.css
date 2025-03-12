@@ -1,0 +1,371 @@
+/* Container */
+.dashboard-container {
+    font-family: Arial, sans-serif;
+    background-color: #f9fafe;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  /* Header */
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .header-left {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    border-radius: 45px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .breadcrumb {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 22rem;
+    border-radius: 45px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .search-bar {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon {
+    font-size: 16px;
+    color: #777;
+    cursor: pointer;
+  }
+  
+  .user-icon {
+    background-color: #0056b3;;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  /* Main Section */
+  .dashboard-main {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .version-toggle {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .version-button {
+    font-size: 1.3rem;
+    margin: 5px;
+    height: 5rem;
+    width: 9rem;
+    border: none;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #555;
+    font-weight: bold;
+    text-decoration: none !important; 
+  }
+  
+  .version-button:hover {
+    background-color: #007bff !important; /* Ensure the background color is applied */
+    color: #fff !important; /* Ensure the text color is applied */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* Ensure the shadow effect is applied */
+    transition: all 0.3s ease !important; /* Ensure the transition is smooth */
+  } 
+
+
+  .version-button.active {
+    background-color: #0056b3;;
+    color: #fff;
+  }
+  
+  .plugin-status {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .lightning-icon {
+    font-size: 80px;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+  }
+  
+  .chat-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 70rem;
+    width: 65rem;
+  }
+  
+
+  
+  .submit-button {
+    font-size: 2rem;
+    width: 12rem;
+    height: 5rem;
+    background-color: #0056b3;;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .submit-button:hover {
+    background-color: #007bff !important; /* Ensure the background color is applied */
+    color: #fff !important; /* Ensure the text color is applied */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* Ensure the shadow effect is applied */
+    transition: all 0.3s ease !important; /* Ensure the transition is smooth */
+  } 
+  
+  /* Footer */
+  .dashboard-footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .right-button {
+    border-radius: 0px 20px 20px 0px;
+    
+  }
+
+  .left-button {
+    border-radius: 20px 0px 0px 20px;
+  }
+
+  .chat-title {
+    font-size: 4.5rem;
+
+  }
+
+  /* Conversation Container */
+.conversation-container {
+    max-height: 60vh; /* Limits the height of the conversation box */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 20px;
+    margin-bottom: 20px;
+    /* background-color: #fff; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    width: 100%;
+    max-width: 70rem;
+  }
+
+  /* Responsive Styling */
+@media (max-width: 768px) {
+    .conversation-container {
+      max-width: 90%;
+    }
+  
+    .chat-box {
+      max-width: 90%;
+    }
+  
+    .chat-input {
+      font-size: 1.5rem;
+    }
+  
+    .submit-button {
+      font-size: 1.5rem;
+      width: 10rem;
+    }
+  }
+
+/* Chat Messages */
+.chat-message {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 100%;
+  word-wrap: break-word;
+  padding-left: 4rem;
+}
+
+.user-message {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+  text-align: right; /* Align the text to the right */
+  margin-left: auto; /* Push the message to the right */
+  padding: 10px; /* Optional: Add padding for better appearance */
+  border-radius: 8px; /* Optional: Add rounded corners for style */
+  max-width: 80%; /* Optional: Set a max width for better layout */
+  word-wrap: break-word; /* Ensure text wraps properly */
+}
+
+  
+  .server-message {
+    background-color: #f1f1f1;
+    color: #333;
+    align-self: flex-start;
+
+    max-width: 80%; /* Optional: Set a max width for better layout */
+    word-wrap: break-word; /* Ensure text wraps properly */
+    
+  }
+  
+  /* Chat Input and Submit Button */
+  .chat-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 70rem;
+  }
+
+  .chat-input {
+    background-color: white;
+    font-size: 2rem;
+    text-align: center;
+    height: 5rem;
+    border-radius: 3rem;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+    outline: none;
+  }
+
+  .plus-input {
+    background-color: white;
+    font-size: 2rem;
+    height: 5rem;
+    border-radius: 3rem;
+    flex: 1;
+    margin-right: 20px;
+    outline: none;
+  }
+
+  .text-input {
+    text-align: center;
+    width: 50rem;
+    font-size: 2rem;
+    height: 5rem;
+    flex: 1;
+    border: 2px solid white; /* Always white border */
+    background-color: transparent; /* Optional, depends on your design */
+    color: black; /* Text color */
+    outline: none; /* Removes default browser focus outline */
+  }
+  
+  .text-input:focus {
+    border: 2px solid white; /* Keep the white border on focus */
+    box-shadow: none; /* Prevent any focus shadow */
+    outline: none; /* Ensures no default blue outline */
+  }
+  
+
+  .plus-input {
+    cursor: pointer;
+    font-size: 2rem;
+    color: gray;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border: 2px solid gray;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .plus-input:hover::after {
+    content: 'Attach txt file';
+    position: absolute;
+    top: -30px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    white-space: nowrap;
+    z-index: 100;
+    opacity: 1;
+    pointer-events: none;
+  }
+  
+  /* Changes when a file is selected */
+  .plus-input.file-selected {
+    background-color: blue; /* Change background to blue */
+    color: white; /* Change text color to white */
+    border-color: blue; /* Change border color to blue */
+  }
+  
+  .plus-input.file-selected:hover::after {
+    content: 'File selected'; /* Update hover tooltip when a file is selected */
+  }
+  
+
+  .quiz-label {
+    cursor: pointer;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333333;
+    transition: all 0.3s ease;
+  }
+  
+  .quiz-label-selected {
+    background-color: #1a237e; /* Dark blue */
+    color: #ffffff;
+  }

@@ -1,0 +1,13 @@
+services:
+  flask-server:
+    image: ankitrajput/rag-stack-docker:v1
+    container_name: flask-server
+    ports:
+      - "8090:8090" 
+    restart: unless-stopped
+  react_app:
+    image: ankitrajput/rag-stack-frontend:v1
+    ports:
+      - "9000:9000"
+    depends_on:
+      - flask-server
